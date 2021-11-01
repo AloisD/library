@@ -18,7 +18,25 @@ echo "Connected successfully";
 <h1>Library</h1>
 <h2>Here are our books</h2>
 
-<table style="width:100%">
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+
+<table>
     <tr>
         <th>Title</th>
         <th>Author</th>
@@ -46,7 +64,6 @@ if ($result->num_rows > 0) {
 </table>
 
 <h2>Add a new book</h2>
-
 
 <form action="insert.php" method="post">
     <label>Title</label>
